@@ -1,6 +1,7 @@
 # Servidor_NFS_Compass
 Servirdor NFS AWS
-Paaso 1 - Para instalar um servidor NFS (Network File System) no Amazon Linux 2, siga os passos abaixo:
+
+#Paaso 1 - Para instalar um servidor NFS (Network File System) no Amazon Linux 2, siga os passos abaixo:
 
 1. Conecte-se à Instância:
    Use SSH para se conectar à sua instância Amazon Linux 2.
@@ -61,7 +62,7 @@ Use o comando mkdir para criar um diretório dentro do filesystem do NFS. Por ex
    sudo exportfs -a
  
 
-Passo 2 - Para instalar o servidor web Apache 2 no Amazon Linux 2, siga os passos abaixo:
+#Passo 2 - Para instalar o servidor web Apache 2 no Amazon Linux 2, siga os passos abaixo:
 
 1. Atualize o Sistema:
    É uma boa prática atualizar o sistema operacional antes de instalar novos pacotes. Execute o seguinte comando para atualizar os repositórios de pacotes e atualizar o sistema:
@@ -101,7 +102,7 @@ Agora o Apache 2 está instalado e em execução na sua instância Amazon Linux 
 
 
 
-Passo 3. Criar um script de validação para o serviço Apache:
+#Passo 3. Criar um script de validação para o serviço Apache:
 
 Agora, vamos criar um script de validação para verificar se o serviço Apache está funcionando e enviar o resultado para um diretório NFS.
 
@@ -150,7 +151,7 @@ Não esqueça de permissão ao documentos criados para bash/script ter acesso e 
     
     sudo chmod 777 servico_online.txt
 
-Passo 4. Preparar a execução automatizada do script a cada 5 minutos:
+#Passo 4. Preparar a execução automatizada do script a cada 5 minutos:
 
 1. Abra o cron para edição:
 Vale ressaltar cron no amazon linux2 abre o editor vim para edição por favor consultar documento de nome Comando Vim anexado com comandos básicos.
