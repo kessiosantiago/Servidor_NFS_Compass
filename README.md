@@ -7,8 +7,8 @@
    · Gerar 1 elastic IP e anexar à instância EC2;
    · Liberar as portas de comunicação para acesso público: (22/TCP, 111/TCP e UDP, 2049/TCP/UDP, 80/TCP, 443/TCP).
 
-# 2. Requisitos no linux: · Configurar o NFS entregue;
-   
+# 2. Requisitos no linux: 
+   · Configurar o NFS entregue;
    · Criar um diretorio dentro do filesystem do NFS com seu nome;
    · Subir um apache no servidor - o apache deve estar online e rodando;
    · Criar um script que valide se o serviço esta online e envie o resultado da validação para o seu diretorio no nfs;
@@ -17,3 +17,4 @@
    · Preparar a execução automatizada do script a cada 5 minutos. · Fazer o versionamento da atividade;
 
 # 3. Fazer a documentação explicando o processo de instalação do Linux.
+
