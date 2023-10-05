@@ -1,0 +1,69 @@
+﻿Criando uma instância no Amazon EC2 com o sistema operacional Amazon Linux 2
+
+Passo 1: Acesso ao Console da AWS
+
+
+Acesse o Console da AWS em https://aws.amazon.com/ e faça login na sua conta.
+
+
+Passo 2: Navegue até o Amazon EC2
+
+
+No console da AWS, vá para o serviço Amazon EC2.
+
+
+Passo 3: Crie uma Chave de Acesso (se você não tiver uma)
+
+
+Se você ainda não tem uma chave de acesso, você pode criá-la seguindo os passos abaixo:
+
+
+1. No painel de navegação do EC2, vá para "Key Pairs" (Pares de Chaves) no menu "Network & Security" (Rede e Segurança).
+2. Clique em "Create Key Pair" (Criar Par de Chaves).
+3. Dê um nome para a chave, selecione o formato do arquivo (por exemplo, PEM) e clique em "Create Key Pair" (Criar Par de Chaves). Isso irá baixar a chave para o seu computador.
+
+
+Guarde a chave em um local seguro, pois você precisará dela para se conectar à instância via SSH.
+
+
+Passo 4: Inicie a Instância EC2
+
+
+Agora, vamos criar a instância EC2:
+
+
+1. No painel de navegação do EC2, clique em "Instances" (Instâncias).
+2. Clique em "Launch Instances" (Iniciar Instâncias).
+3. Selecione "Amazon Linux 2" como a imagem da AMI.
+4. Escolha o tamanho da instância "t3.small".
+5. Configure as opções desejadas (você pode deixar as configurações padrão ou personalizá-las conforme necessário).
+6. Na seção "Configure Security Group" (Configurar Grupo de Segurança), crie um novo grupo de segurança ou use um existente e adicione as regras de tráfego que você mencionou. Para adicionar as regras, clique em "Add Rule" (Adicionar Regra) para cada uma e configure os detalhes de acordo com sua lista, como SSH (porta 22 TCP), Custom TCP (portas 111 e 2049), Custom UDP (portas 111 e 2049), HTTP (porta 80 TCP) e HTTPS (porta 443 TCP).
+7. Revise as configurações e clique em "Launch" (Iniciar).
+8. Selecione a chave de acesso que você criou ou já possui e clique em "Launch Instances" (Iniciar Instâncias).
+
+
+A instância EC2 agora está sendo inicializada.
+
+
+Passo 5: Acesse a Instância via SSH
+
+
+Após a instância ser inicializada, você pode acessá-la via SSH usando a chave de acesso que você associou à instância:
+
+
+1. Obtenha o endereço IP público da instância a partir do console do EC2.
+2. Abra seu terminal ou aplicativo de SSH no sistema desejado.
+3. De permissão de acesso a sua chave privada com o comando a seguir e caso use Linux ou MacOS:
+
+
+chmod 400 /caminho/para/sua/minhachave.pem
+
+
+4. Use o comando SSH com a chave privada que você criou anteriormente para se conectar à instância. 
+5. Use o comando a seguir como  exemplo substitua `/caminho/para/sua/minhachave.pem` pelo caminho para o arquivo da chave privada e `ec2-user@seu-endereco-ip` pelo usuário do sistema:
+
+
+ssh -i /caminho/para/sua/minhachave.pem ec2-user@seu-endereco-ip
+
+
+Agora você está conectado à sua instância EC2 no Amazon Linux 2 via SSH e pode começar a usá-la conforme necessário. Certifique-se de manter sua chave privada segura, pois ela é usada para autenticar a conexão SSH.
