@@ -16,5 +16,4 @@
    · O script deve gerar 2 arquivos de saida: 1 para o serviço online e 1 para o serviço OFFLINE;
    · Preparar a execução automatizada do script a cada 5 minutos. · Fazer o versionamento da atividade;
 
-# 3. Fazer a documentação explicando o processo de instalação do Linux.
 
