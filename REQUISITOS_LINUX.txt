@@ -217,3 +217,7 @@ Adicione a seguinte linha ao seu arquivo crontab para executar o script a cada 5
 3. Salve e saia do editor de crontab.
  Use um anexo para verificar os comandos necessários.
 Agora, o script `check_apache.sh` será executado automaticamente a cada 5 minutos para verificar o status do serviço Apache e registrar o resultado nos arquivos `servico_online.txt` e `servico_offline.txt` no diretório NFS especificado. Certifique-se de que o serviço Apache e o diretório NFS estejam configurados corretamente antes de executar o script em produção.
+
+#Erros e Soluções
+
+Devido ao fusohoráio vindo do local onde se encotra amaquina amazon foi necessaário alterar para fusohorário brasileiro segue comando para alteraçã
